@@ -10,5 +10,5 @@
   
   OK to include in mod packs.
   
-  ATTN Steam users: I will be updating THIS HERE for new alphas, not creating a new mod for a new version. When A17 (etc.) hits, and I update accordingly, Steam will automatically update your copy of the mod to A17 whether you like it or not. See https://github.com/Tammabanana/Pygmy-Muffalos/releases for earlier-alpha versions, and http://rimworldwiki.com/wiki/Installing_mods#Installation for where to put the unzipped mod folder.</description>
+  ATTN Steam users: I will be updating THIS HERE for new alphas, not creating a new mod for a new version. When A17 hits, and I update accordingly, Steam will automatically update your copy of the mod to A17 whether you like it or not; this may break your game if you've set your Rimworld version to stay A16. See https://github.com/Tammabanana/Pygmy-Muffalos/releases for earlier-alpha versions, and http://rimworldwiki.com/wiki/Installing_mods#Installation for where to put the unzipped mod folder.</description>
 </ModMetaData>
