@@ -7,18 +7,51 @@
     <description>A smaller species of muffalo, bred for their hardiness in less-vegetative environments.</description>
     <statBases>
       <MoveSpeed>3.6</MoveSpeed>
-      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
-      <MarketValue>500</MarketValue>
+      <ComfyTemperatureMin>-55</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <MarketValue>150</MarketValue>
     </statBases>
-    <verbs>
+    <tools>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.9</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
-    </verbs>
+      <li>
+        <label>left hoof</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hoof</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
     <comps>
       <li Class="CompProperties_Milkable">
         <milkDef>Milk</milkDef>
@@ -34,13 +67,17 @@
     <race>
 		<wildBiomes>
 			<AridShrubland>1</AridShrubland>
+      <ColdBog>0.5</ColdBog>
 			<Desert>0.5</Desert>
 			<ExtremeDesert>0.2</ExtremeDesert>
 			<BorealForest>0.5</BorealForest>
-			<Tundra>1</Tundra>
-			<IceSheet>0.08</IceSheet>
+			<Tundra>2</Tundra>
+			<IceSheet>0.1</IceSheet>
+      <SeaIce>0.1</SeaIce>
 			<TemperateForest>0.5</TemperateForest>
-			<!-- <TropicalRainforest>0.0</TropicalRainforest> -->
+      <TemperateSwamp>0.5</TemperateSwamp>
+			<!--<TropicalRainforest>0.0</TropicalRainforest>
+      <TropicalSwamp>0.0</TropicalSwamp>-->
 		</wildBiomes>
       <herdAnimal>true</herdAnimal>
       <body>QuadrupedAnimalWithHooves</body>
@@ -79,7 +116,7 @@
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
     <tradeTags>
-      <li>StandardAnimal</li>
+      <li>AnimalCommon</li>
     </tradeTags>
   </ThingDef>
   
@@ -99,7 +136,7 @@
         <label>pygmy muffalo calf</label>
         <labelPlural>pygmy muffalo calves</labelPlural>
         <bodyGraphicData>
-          <texPath>pygmymuffalo</texPath>
+          <texPath>Things/Pawn/Animal/PygmyMuffalo</texPath>
           <drawSize>1.25</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -107,13 +144,13 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
           <drawSize>1.25</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>pygmymuffalo</texPath>
+          <texPath>Things/Pawn/Animal/PygmyMuffalo</texPath>
           <drawSize>1.5</drawSize>
           <shadowData>
             <volume>(0.6, 0.45, 0.45)</volume>
@@ -121,13 +158,13 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>pygmymuffalo</texPath>
+          <texPath>Things/Pawn/Animal/PygmyMuffalo</texPath>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>
@@ -135,7 +172,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
